@@ -1,0 +1,211 @@
+.flex {
+    display: flex;
+}
+
+label {
+    display:block;
+    min-width:60px;
+}
+/* カード部分　*/
+.poke_card {
+    border :solid #888;
+    width: 200px;
+}
+
+.number {
+    width: 3em;
+}
+/* 基本エリア　*/
+.kihon_area {
+    text-align: center;
+}
+
+/* タイプアイコン*/
+.typeWrap span:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.typeWrap span:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.typeWrap span {
+    padding: 8px 12px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.pt0 {
+    background: #aeaeae;
+}
+
+.pt1 {
+    background: #ffa766;
+}
+
+.pt2 {
+    background: #64c5f7;
+}
+
+.pt3 {
+    background: #e7d400;
+}
+
+.pt4 {
+    background: #9ac30e;
+}
+
+.pt5 {
+    background: #60e9f5;
+}
+
+.pt6 {
+    background: #ee6969;
+}
+
+.pt7 {
+    background: #ab7aca;
+}
+
+.pt8 {
+    background: #c8a841;
+}
+
+.pt9 {
+    background: #64a7f1;
+}
+
+.pt10 {
+    background: #eb7ff4;
+}
+
+.pt11 {
+    background: #51cb5a;
+}
+
+.pt12 {
+    background: #fac727;
+}
+
+.pt13 {
+    background: #756eb4;
+}
+
+.pt14 {
+    background: #ff8859;
+}
+
+.pt15 {
+    background: #6881d4;
+}
+
+.pt16 {
+    background: #818aa4;
+}
+
+.pt17 {
+    background: #fc7799;
+}
+
+.pt20 {
+    background: #ebebeb;
+}
+
+    /* プラスマイナスアイコン*/
+.dli-plus {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    line-height: 1;
+    width: 1em;
+    height: 0.1em;
+    background: currentColor;
+    border-radius: 0.1em;
+    position: relative;
+  }
+  
+  .dli-plus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    transform: rotate(90deg);
+  }
+
+  .dli-minus {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    line-height: 1;
+    width: 1em;
+    height: 0.1em;
+    background: currentColor;
+    border-radius: 0.1em;
+  }
+
+
+
+.my_party,
+.enemy_party {
+    display: grid;
+    margin: 5px;
+    grid:
+    "card_title  card_title ."
+    "card1  card2  card3"
+    "card4  card5  card6"
+    /200px 200px 200px;
+        grid-row-gap: 10px;
+        grid-gap: 10px;
+    border: solid black;
+    width: 800px;
+}
+
+.card_title {
+    grid-area: card_title;
+}
+.card1 {
+    grid-area: card1;
+}
+.card2 {
+    grid-area: card2;
+}
+.card3 {
+    grid-area: card3;
+}
+.card4 {
+    grid-area: card4;
+}
+.card5 {
+    grid-area: card5;
+}
+.card6 {
+    grid-area: card6;
+}
+
+/* 結果部分　*/
+.result_area {
+    border :solid #888;
+    width: 800px;
+}
+.result_area table{
+    width: 100%;
+}
+
+.result_area thead{
+    background: #549ffa;
+    color: white;
+}
+.result_area th,
+.result_area td {
+    border: 1px solid #ccc;
+}
+
+.result_area td {
+    height: 30px;
+}

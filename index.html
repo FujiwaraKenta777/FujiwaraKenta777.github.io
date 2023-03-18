@@ -10,56 +10,90 @@
         <script src="poke_data.js"></script>
     </head>
     <body class="webp">
-        <div class="input_area">
-            <div class="flex">
-                <label>自分のパーティ１</label>
-                <input type="text" value="aaa" class="my1_input"></input>
+        <div class="flex">
+            <div class="input_area">
+                <div class="flex">
+                    <label>自分のパーティ１</label>
+                    <input type="text" class="my1_input"></input>
+                </div>
+                <div class="flex">
+                    <label>自分のパーティ２</label>
+                    <input type="text" class="my2_input"></input>
+                </div>
+                <div class="flex">
+                    <label>自分のパーティ３</label>
+                    <input type="text" class="my3_input"></input>
+                </div>
+                <div class="flex">
+                    <label>自分のパーティ４</label>
+                    <input type="text" class="my4_input"></input>
+                </div>
+                <div class="flex">
+                    <label>自分のパーティ５</label>
+                    <input type="text" class="my5_input"></input>
+                </div>
+                <div class="flex">
+                    <label>自分のパーティ６</label>
+                    <input type="text" class="my6_input"></input>
+                </div>
+                <div class="flex">
+                    <label>相手のパーティ１</label>
+                    <input type="text" class="enemy1_input"></input>
+                </div>
+                <div class="flex">
+                    <label>相手のパーティ２</label>
+                    <input type="text" class="enemy2_input"></input>
+                </div>
+                <div class="flex">
+                    <label>相手のパーティ３</label>
+                    <input type="text" class="enemy3_input"></input>
+                </div>
+                <div class="flex">
+                    <label>相手のパーティ４</label>
+                    <input type="text" class="enemy4_input"></input>
+                </div>
+                <div class="flex">
+                    <label>相手のパーティ５</label>
+                    <input type="text" class="enemy5_input"></input>
+                </div>
+                <div class="flex">
+                    <label>相手のパーティ６</label>
+                    <input type="text" class="enemy6_input"></input>
+                </div>
+                <input id="button" type="button" value="計算"/>
             </div>
-            <div class="flex">
-                <label>自分のパーティ２</label>
-                <input value="" class="my2_input"></input>
+            <div class="result_area" style="margin-left: 5px;">
+                <table id="result-table">
+                    <thead>
+                        <tr>
+                            <th class="my_party_result_area">
+                                <span>自分パーティ</span>
+                            </th>
+                            <th class="result_num_result_area">
+                                <span>実数値</span>
+                            </th>
+                            <th class="enemy_party_result_area">
+                                <span>相手パーティ</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        
+                        <td>
+    
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="flex">
-                <label>自分のパーティ３</label>
-                <input value="" class="my3_input"></input>
-            </div>
-            <div class="flex">
-                <label>自分のパーティ４</label>
-                <input value="" class="my4_input"></input>
-            </div>
-            <div class="flex">
-                <label>自分のパーティ５</label>
-                <input value="" class="my5_input"></input>
-            </div>
-            <div class="flex">
-                <label>自分のパーティ６</label>
-                <input value="" class="my6_input"></input>
-            </div>
-            <div class="flex">
-                <label>相手のパーティ１</label>
-                <input value="" class="ene1_input"></input>
-            </div>
-            <div class="flex">
-                <label>相手のパーティ２</label>
-                <input value="" class="ene2_input"></input>
-            </div>
-            <div class="flex">
-                <label>相手のパーティ３</label>
-                <input value="" class="ene3_input"></input>
-            </div>
-            <div class="flex">
-                <label>相手のパーティ４</label>
-                <input value="" class="ene4_input"></input>
-            </div>
-            <div class="flex">
-                <label>相手のパーティ５</label>
-                <input value="" class="ene5_input"></input>
-            </div>
-            <div class="flex">
-                <label>相手のパーティ６</label>
-                <input value="" class="ene6_input"></input>
-            </div>
-            <input id="button" type="button" value="ボタン1"/>
+    
         </div>
         <div class="my_party">
             <div class="card_title">自分のパーティ</div>
@@ -75,15 +109,15 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input  id="my_speed1" value="999" class="number" disabled></input>
+                        <input id="my1_syuzoku" value="999" class="number" disabled></input>
                     </div>
                     <div class="flex">
                         <label>個体値</label>
-                        <input value="31" class="number"></input>
+                        <input id="my1_kotai" value="31" class="number"></input>
                     </div>
                     <div class="flex">
                         <label>性格</label>
-                        <select class="seikaku">
+                        <select id="my1_seikaku" class="seikaku">
                             <option value="1.1">↑</option>
                             <option value="1.0" selected>-</option>
                             <option value="0.9">↓</option>
@@ -91,12 +125,12 @@
                     </div>
                     <div class="flex">
                         <label>努力値</label>
-                        <input value="252" class="number"></input>
+                        <input id="my1_doryoku" value="252" class="number"></input>
                     </div>
                     <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="my1_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -105,18 +139,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="my1_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="my1_mahi" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>天候操作<input id="my1_tenkou" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="my1_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -124,9 +158,9 @@
                 </div>
             </div>
             <div class="card2 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="my_name2"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="my_type2" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -135,16 +169,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="my2_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
                         <label>個体値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my2_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="my2_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
                     </div>
                     <div class="flex">
                         <label>努力値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my2_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="my2_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -153,14 +199,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="my2_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="my2_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="my2_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="my2_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -168,9 +218,9 @@
                 </div>
             </div>
             <div class="card3 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="my_name3"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="my_type3" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -179,16 +229,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="my3_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
                         <label>個体値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my3_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="my3_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
                     </div>
                     <div class="flex">
                         <label>努力値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my3_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="my3_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -197,14 +259,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="my3_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="my3_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="my3_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="my3_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -212,9 +278,9 @@
                 </div>
             </div>
             <div class="card4 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="my_name4"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="my_type4" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -223,16 +289,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="my4_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
                         <label>個体値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my4_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="my4_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
                     </div>
                     <div class="flex">
                         <label>努力値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my4_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="my4_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -241,14 +319,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="my4_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="my4_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="my4_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="my4_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -256,9 +338,9 @@
                 </div>
             </div>
             <div class="card5 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="my_name5"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="my_type5" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -267,16 +349,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="my5_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
                         <label>個体値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my5_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="my5_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
                     </div>
                     <div class="flex">
                         <label>努力値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my5_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="my5_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -285,14 +379,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="my5_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="my5_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="my5_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="my5_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -300,9 +398,9 @@
                 </div>
             </div>
             <div class="card6 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="my_name6"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="my_type6" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -311,16 +409,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="my6_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
                         <label>個体値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my6_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="my6_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
                     </div>
                     <div class="flex">
                         <label>努力値</label>
-                        <input value="999" class="number"></input>
+                        <input id="my6_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="my6_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -329,14 +439,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="my6_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="my6_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="my6_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="my6_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -348,9 +462,9 @@
         <div class="enemy_party">
             <div class="card_title">相手のパーティ</div>
             <div class="card1 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="enemy_name1"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="enemy_type1" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -359,10 +473,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="enemy1_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
+                        <label>個体値</label>
+                        <input id="enemy1_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="enemy1_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label>努力値</label>
+                        <input id="enemy1_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="enemy1_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -371,14 +503,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="enemy1_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="enemy1_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="enemy1_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="enemy1_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -386,9 +522,9 @@
                 </div>
             </div>
             <div class="card2 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="enemy_name2"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="enemy_type2" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -397,10 +533,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="enemy2_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
+                        <label>個体値</label>
+                        <input id="enemy2_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="enemy2_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label>努力値</label>
+                        <input id="enemy2_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="enemy2_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -409,14 +563,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="enemy2_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="enemy2_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="enemy2_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="enemy2_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -424,9 +582,9 @@
                 </div>
             </div>
             <div class="card3 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="enemy_name3"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="enemy_type3" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -435,10 +593,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="enemy3_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
+                        <label>個体値</label>
+                        <input id="enemy3_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="enemy3_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label>努力値</label>
+                        <input id="enemy3_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="enemy3_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -447,14 +623,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="enemy3_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="enemy3_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="enemy3_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="enemy3_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -462,9 +642,9 @@
                 </div>
             </div>
             <div class="card4 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="enemy_name4"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="enemy_type4" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -473,10 +653,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="enemy4_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
+                        <label>個体値</label>
+                        <input id="enemy4_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="enemy4_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label>努力値</label>
+                        <input id="enemy4_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="enemy4_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -485,14 +683,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="enemy4_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="enemy4_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="enemy4_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="enemy4_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -500,9 +702,9 @@
                 </div>
             </div>
             <div class="card5 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="enemy_name5"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="enemy_type5" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -511,10 +713,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="enemy5_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
+                        <label>個体値</label>
+                        <input id="enemy5_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="enemy5_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label>努力値</label>
+                        <input id="enemy5_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="enemy5_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -523,14 +743,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="enemy5_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="enemy5_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="enemy5_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="enemy5_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -538,9 +762,9 @@
                 </div>
             </div>
             <div class="card6 poke_card">
-                <div class="kihon_area flex">
-                    <span><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
-                    <div class="typeWrap">
+                <div class="kihon_area">
+                    <span id="enemy_name6"><i class="icon32_sp n906"></i>なまえ<br>１２３４５６７８９０</span>
+                    <div id="enemy_type6" class="typeWrap">
                         <span class="pt6">闘</span>
                         <span class="pt1">炎</span>
                     </div>
@@ -549,10 +773,28 @@
                 <div class="para_area">
                     <div class="flex">
                         <label>種族値</label>
-                        <input value="999" class="number" disabled></input>
+                        <input id="enemy6_syuzoku" value="999" class="number" disabled></input>
+                    </div>
+                    <div class="flex">
+                        <label>個体値</label>
+                        <input id="enemy6_kotai" value="31" class="number"></input>
+                    </div>
+                    <div class="flex">
+                        <label>性格</label>
+                        <select id="enemy6_seikaku" class="seikaku">
+                            <option value="1.1">↑</option>
+                            <option value="1.0" selected>-</option>
+                            <option value="0.9">↓</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <label>努力値</label>
+                        <input id="enemy6_doryoku" value="252" class="number"></input>
+                    </div>
+                    <div class="flex">
                         <label>変化</label>
                         <div>
-                            <input value="±9" class="number"></input>
+                            <input id="enemy6_henka" value="0" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -561,14 +803,18 @@
                 <hr>
                 <div class="option_area">
                     <div class="flex">
-                        <label>スカーフ<input type="checkbox"></input></label>
-                        <label>まひ状態<input type="checkbox"></input></label>
+                        <label>スカーフ<input id="enemy6_scarf" type="checkbox"></input></label>
                     </div>
                     <div class="flex">
-                        <label>天候操作<input type="checkbox"></input></label>
+                        <label>まひ状態<input id="enemy6_mahi" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
+                        <label>天候操作<input id="enemy6_tenkou" type="checkbox"></input></label>
+                    </div>
+                    <div class="flex">
                         <label>その他</label>
                         <div>
-                            <input value="×1.5" class="number"></input>
+                            <input id="enemy6_other" value="1" class="number"></input>
                             <span class="dli-minus"></span>
                             <span class="dli-plus"></span>
                         </div>
@@ -576,40 +822,5 @@
                 </div>
             </div>
         </div>
-        
-        <div class="result_area">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="my_party_result_area">
-                            <span>自分パーティ</span>
-                        </th>
-                        <th class="result_num_result_area">
-                            <span>実数値</span>
-                        </th>
-                        <th class="enemy_party_result_area">
-                            <span>相手パーティ</span>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    
-                    <td>
-
-                    </td>
-                    <td>
-                        
-                    </td>
-                    <td>
-                        
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
-
-
     </body>
 </html>
